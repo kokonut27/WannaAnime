@@ -1,0 +1,1 @@
+console.log("WannaAnime is running!");
