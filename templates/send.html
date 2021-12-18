@@ -10,6 +10,12 @@
     <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet"/>
   </head>
   <body>
+
+    <form method="POST" action="/send">
+      <input name="animename" placeholder="Anime or Manga name" autocomplete="off" required />
+      <button> Submit </button>
+    </form>
+
     
     <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>

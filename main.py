@@ -15,15 +15,15 @@ def index():
 def anime():
   return render_template("anime.html")
 
-@app.route('/send_suggestion', methods = ["GET", "POST"])
+@app.route('/send')
 def suggestion():
-  if request.method == "GET":
-    return render_template("send.html")
-  if request.method == "POST":
-    value = request.form["anime_name"]
+  return render_template("send.html")
 
-    value = value.jsonify()
+@app.route('/send', methods = ["POST"])
+def sent():
+  if request.method == "POST":
+    value = request.form["animename"]
     
-    return render_template("sent.html")
+    return render_template("sent.html", value=value)
 
 app.run(host = "0.0.0.0", port = 8080)
