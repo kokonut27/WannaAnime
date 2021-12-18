@@ -23,6 +23,8 @@ def suggestion():
 def sent():
   if request.method == "POST":
     value = request.form["animename"]
+
+    # Append the value to the json file permanantly
     
     return render_template("sent.html", value=value)
 
